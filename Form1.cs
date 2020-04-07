@@ -157,7 +157,44 @@ namespace WindowsFormsApp7
             label2.Text = "x^2";
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            string a = textBox3.Text.ToLower().ToString();
+            textBox4.Text = a;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            string a = textBox3.Text.ToUpper().ToString();
+            textBox4.Text = a;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            string a = textBox3.Text.Length.ToString();
+            label5.Text = $"Длина строки:{a}";
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox4.Text = textBox3.Text.Replace("чю", "чу");
+
+            textBox4.Text = textBox3.Text.Replace("щю", "щу");
+
+            textBox4.Text = textBox3.Text.Replace("чя", "ча");
+            
+            textBox4.Text = textBox3.Text.Replace("щя", "ща");
+            
+            textBox4.Text = textBox3.Text.Replace("жы", "жи");
+            
+            textBox4.Text = textBox3.Text.Replace("шы", "ши");
+            
+            textBox4.Text = textBox3.Text.Replace("чьн", "чн");
+            
+            textBox4.Text = textBox3.Text.Replace("чьк", "чк");
+        }
+        
+            private void button17_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text + ",";
         }
